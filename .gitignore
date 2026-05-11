@@ -1,3 +1,20 @@
+# nim compiler trash
 nimcache/
 nimblecache/
 htmldocs/
+
+# macOS presents
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# project specific
+test1
+CRN_BUILD_*
+CRN_EXTRACTED*
+nimble.develop
+nimble.paths
+nimbledeps
