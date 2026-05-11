@@ -45,8 +45,8 @@ proc apply*(archive: CRNArchive) =
                 if compareFileHash(archive.hashes[relPath], pc):
                     # get dest path
                     let dest = getHomeDir() / pc.relativePath(tmp / "home")
-                    createDir(dest.parentDir()) 
-                    moveFile(pc, dest)
+                    createDir dest.parentDir
+                    moveFile pc, dest
                 else:
                     raise newException(IntegrityError, fmt"file is corrupted: {relPath}")
 

@@ -10,7 +10,7 @@ import types
 proc load(jsonStr: string, exceptionMessage: string, hook: proc(n: JsonNode)) = 
     try:
         let parsedJson = parseJson jsonStr
-        hook(parsedJson)
+        hook parsedJson
     except CatchableError as e:
         raise newException(ParserError, exceptionMessage % e.msg)
 
